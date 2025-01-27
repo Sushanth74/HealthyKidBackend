@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "netlify deploy --prod"
   },
+  
   "keywords": [],
+  "engines": {
+  "node": "16.x"
+},
+
   "author": "",
   "license": "ISC",
   "dependencies": {
