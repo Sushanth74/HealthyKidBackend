@@ -5,14 +5,13 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "netlify deploy --prod"
+    "build": "mkdir -p dist && cp -r functions dist && netlify deploy --prod"
+
   },
-  
   "keywords": [],
   "engines": {
-  "node": "16.x"
-},
-
+    "node": "16.x"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -22,8 +21,10 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mysql2": "^3.12.0",
-    "netlify-cli": "^17.38.1",
     "netlify-lambda": "^2.0.16",
     "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^18.0.2"
   }
 }
